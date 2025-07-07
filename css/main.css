@@ -2,6 +2,9 @@
     --primary-color: #602B45;
     --white: #ffffff;
     --secondary-color: #d9909a;
+    --thirdary-color: #f7f4f6;
+    --gray: #222;
+    --lightgray: #444;
     --default-gap: 1rem;
 }
 html{
@@ -192,8 +195,8 @@ body{
 /*CSS DO MIDDLE (ABOUT ME) SECTION*/
 .middleContent{
     padding-block: 3rem;
-    background: #f7f4f6;
-    color: #222;
+    background: var(--thirdary-color);
+    color: var(--gray);
 }
 .middleContent .row{
     display: flex;
@@ -260,19 +263,19 @@ body{
 
 /*-------------------------------------------------------------------------------------*/
 
-/*CSS DA MAIN (PROCEEDURES)*/
+/*CSS DA MAIN (TREATMENTS)*/
 .mainContent{
-    background:#fff;
-    padding-block:3rem;
+    background: var(--white);
+    padding-block: 3rem;
 }
 .mainContent .row{
-    display:grid;
-    grid-template-columns:1fr; 
-    gap:2.5rem;                       
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 2.5rem;                       
     padding-inline: 1rem;
 }
 .mainContent_title-card{
-    grid-column: 1 / -1; 
+    grid-column: 1 / -1; /*ocupa a grid toda*/
     font-size: 1.75rem;
     font-weight: 700;
     color: var(--primary-color);
@@ -280,10 +283,9 @@ body{
     margin:0;
 }
 .mainContent_article{
-    background-color:#f7f4f6;
-    border-radius:12px;
-    box-shadow:0 4px 10px rgba(0,0,0,.05);
-    transition:transform .25s ease, box-shadow .25s ease;
+    background-color: var(--thirdary-color);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,.05);
 }
 .mainContent_container{
     display:flex;
@@ -379,7 +381,7 @@ body{
     padding-inline: 1rem;
 }
 .reviewContent_article {
-    background: #fff;
+    background: var(--white);
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
     padding: 2rem 1.75rem;
@@ -391,7 +393,7 @@ body{
 .reviewContent_text p {
     font-size: 1rem;
     line-height: 1.6;
-    color: #333;
+    color: var(--gray);
     margin: 0 0 1.25rem;
 }
 .reviewContent_title {
@@ -443,35 +445,27 @@ body{
 
 /*CSS DO FORM*/
 .bookForm{
-    background:#fff;
-    padding-block:3rem;
-    color:#222;
+    background: var(--white);
+    padding-block: 3rem;
+    color: var(--gray);
 }
 .bookForm_article{
-    background:#f7f4f6;
-    border-radius:12px;
-    box-shadow:0 4px 12px rgba(0,0,0,.06);
-    overflow:hidden;
-}
-.bookForm_container{
-    display:flex;
-    flex-direction:column;
-}
-.bookForm_text{
-    padding:2rem 2rem 1rem;
-    text-align:center;
+    padding: 1rem;
+    background: var(--thirdary-color);
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.06);
 }
 .bookForm_text h2{
-    font-size:1.75rem;
-    color:var(--primary-color);
-    margin:0 0 .75rem;
+    font-size: 1.75rem;
+    color: var(--primary-color);
+    margin: 0 0 .75rem;
 }
 .bookForm_text p{
-    font-size:1rem;
-    margin:0;
+    font-size: 1rem;
+    margin: 0;
 }
 
-/* Formulário */
+/*formulario*/
 .bookForm_fields {
     width: 100%;
     margin-top: 1rem;
@@ -488,44 +482,41 @@ body{
     border: 1px solid #ccc;
     border-radius: 6px;
     box-sizing: border-box;
-    transition: border-color .2s ease;
-    display: block;
 }
 .bookForm_fields input:focus, .bookForm_fields select:focus, .bookForm_fields textarea:focus{
-    border-color:var(--primary-color);
-    outline:none;
+    border-color: var(--primary-color);
+    outline: none; /*pra sumir aquela borda azul*/
 }
 .bookForm_submit{
-    display:block;
-    width:100%;
-    margin-top:1.5rem;
-    padding:.9rem;
-    font-size:1.05rem;
-    font-weight:600;
-    color:#fff;
-    background:var(--primary-color);
-    border:0;
-    border-radius:6px;
-    cursor:pointer;
-    transition: background .25s ease, transform .25s ease;
+    display: block;
+    width: 100%;
+    margin-top: 1.5rem;
+    padding: .9rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--white);
+    background: var(--primary-color);
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: .25s ease, transform .25s ease;
 }
 .bookForm_submit:hover{
-    background:color-mix(in srgb,var(--primary-color),#ffffff 15%);
+    background: color-mix(in srgb, var(--primary-color), var(--white) 15%);
     transform:translateY(-2px);
 }
 
 /*mensagem de sucesso*/
 #reservationSuccess{
-    margin-top:1.5rem;
-    background:#e4ffe8;
-    border:1px solid #a2e3ad;
-    border-radius:6px;
-    padding:1rem;
-    text-align:center;
-    font-weight:600;
-    color:#187e32;
+    margin-top: 1.5rem;
+    background: #e4ffe8;
+    border: 1px solid #a2e3ad;
+    border-radius: 6px;
+    padding: 1rem;
+    text-align: center;
+    font-weight: 600;
+    color: #187e32;
 }
-
 .bookForm_fields.checkbox {
     display: flex;
     align-items: center;
@@ -533,7 +524,7 @@ body{
     margin-top: 1rem;
     margin-bottom: 1.5rem;
     font-size: 0.95rem;
-    color: #333;
+    color: var(--gray);
 }
 .bookForm_fields.checkbox input[type="checkbox"] {
     width: 18px;
@@ -541,7 +532,6 @@ body{
     accent-color: #5b2345;
     cursor: pointer;
 }
-
 .feedback {
     display: none;
     position: fixed;
@@ -556,7 +546,7 @@ body{
     display: flex;
 }
 .feedback_box {
-    background: #fff;
+    background: var(--white);
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
     overflow: hidden;
@@ -577,12 +567,12 @@ body{
     width: 100%;
     border: none;
     background: #f2f2f2;
-    color: #333;
+    color: var(--gray);
     padding: 1rem;
     font-size: 1rem;
     cursor: pointer;
     border-top: 1px solid #ccc;
-    transition: background 0.3s ease;
+    transition: 0.3s ease;
 }
 .feedback_box button:hover {
     background: #e6e6e6;
@@ -590,39 +580,32 @@ body{
 
 /*MD DO FORM*/
 @media (min-width:48.75em){
-    .bookForm_container{
-        flex-direction:row;
-        align-items:center;
-    }
-    .bookForm_text, .bookForm_form{
-        flex:1 1 50%;
-    }
     .bookForm_text{
-        padding:2.5rem 2.5rem;
-        text-align:left;
+        padding: 2rem 0 0 2.5rem;
+        text-align: left;
     }
     .bookForm_form{
-        padding:2.5rem 2.5rem 2.8rem;
+        padding: 2.5rem 2.5rem 2.8rem;
     }
     .bookForm_text h2{
-        font-size:2rem;
+        font-size: 2rem;
     }
     .bookForm_text p {
-        font-size:1.05rem;
+        font-size: 1.05rem;
     }
 }
 
 /*XL DO FORM*/
 @media (min-width:74em){
     .bookForm_article{
-        max-width:56rem;
-        margin-inline:auto;
+        max-width: 56rem;
+        margin-inline: auto; /*centraliza responsivamente*/
     }
     .bookForm_text h2{
-        font-size:2.25rem;
+        font-size: 2.25rem;
     }
     .bookForm_text p {
-        font-size:1.125rem; 
+        font-size: 1.125rem; 
     }
 }
 
