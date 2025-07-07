@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mel&Joy Beauty</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/form.js" defer></script>
+    <script src="js/menu.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="header_nav">
+            <button class="header_menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+            <div class="header_menu">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#treatments">Treatments</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#book">Book</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="banner">
+            <div class="maxWidth">
+                <h1 class="banner_title">Mel&Joy Beauty</h1>
+                <h2 class="banner_subtitle">Take your natural beauty to the next level</h2>
+            </div>
+        </section>
+
+        <section class="middleContent" id="about">
+            <div class="maxWidth row">
+                <div class="middleContent_text col-sm-12 col-xl-6">
+                    <h1 class="middleContent_title">About Me</h1>
+                    <p class="middleContent_content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero earum, dolorem harum asperiores pariatur reiciendis unde doloremque laborum minus deserunt tempore tenetur, perspiciatis numquam necessitatibus architecto quos et rerum possimus.</p>
+                </div>
+                <aside>
+                    <img src="img/img_aboutme.png" alt="">
+                </aside>
+            </div>
+        </section>
+
+        <section class="mainContent" id="treatments">
+            <div class="maxWidth row">
+                <p class="mainContent_title-card">Treatments</p>
+                <article class="mainContent_article col-sm-12 col-xl-6">
+                    <div class="mainContent_container">
+                        <div class="mainContent_img">
+                            <img src="img/img_procedure1.jpg" alt="">
+                        </div>
+                        <div class="mainContent_text">
+                            <h3 class="mainContent_title">Facial Cleansing</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, enim? Eveniet dignissimos a nisi distinctio, tempora error obcaecati, impedit, sint quisquam incidunt voluptate repellendus quibusdam?</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="mainContent_article col-sm-12 col-xl-6">
+                    <div class="mainContent_container">
+                        <div class="mainContent_img">
+                            <img src="img/img_procedure2.jpg" alt="">
+                        </div>
+                        <div class="mainContent_text">
+                            <h3 class="mainContent_title">Chemical Peeling</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, enim? Eveniet dignissimos a nisi distinctio, tempora error obcaecati, impedit, sint quisquam incidunt voluptate repellendus quibusdam?</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="mainContent_article col-sm-12 col-xl-6">
+                    <div class="mainContent_container">
+                        <div class="mainContent_img">
+                            <img src="img/img_procedure3.png" alt="">
+                        </div>
+                        <div class="mainContent_text">
+                            <h3 class="mainContent_title">Microneedling</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, enim? Eveniet dignissimos a nisi distinctio, tempora error obcaecati, impedit, sint quisquam incidunt voluptate repellendus quibusdam?</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="mainContent_article col-sm-12 col-xl-6">
+                    <div class="mainContent_container">
+                        <div class="mainContent_img">
+                            <img src="img/img_procedure4.jpg" alt="">
+                        </div>
+                        <div class="mainContent_text">
+                            <h3 class="mainContent_title">Laser Hair Removal</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, enim? Eveniet dignissimos a nisi distinctio, tempora error obcaecati, impedit, sint quisquam incidunt voluptate repellendus quibusdam?</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="reviewContent" id="reviews">
+            <p class="reviewContent_title-card">Reviews</p>
+            <div class="maxWidth">
+                <article class="reviewContent_article col-sm-12 col-xl-6">
+                    <div class="reviewContent_container">
+                        <div class="reviewContent_text">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, enim? Eveniet dignissimos a nisi distinctio, tempora error obcaecati, impedit, sint quisquam incidunt voluptate repellendus quibusdam?</p>
+                            <h3 class="reviewContent_title">Nome da pessoa</h3>
+                        </div>
+                    </div>
+                </article>
+                <article class="reviewContent_article col-sm-12 col-xl-6">
+                    <div class="reviewContent_container">
+                        <div class="reviewContent_text">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, enim? Eveniet dignissimos a nisi distinctio, tempora error obcaecati, impedit, sint quisquam incidunt voluptate repellendus quibusdam?</p>
+                            <h3 class="reviewContent_title">Nome da pessoa</h3>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="bookForm" id="book">
+            <div class="maxWidth">
+                <article class="bookForm_article col-sm-12 col-xl-6">
+                    <div class="bookForm_container">
+                        <div class="bookForm_text">
+                            <h2>Book your reservation!</h2>
+                            <p>Choose a date, time and service to schedule your treatment.</p>
+                        </div>
+                        <div class="bookForm_form">
+                            <form id="reservationForm" novalidate>
+                                <div class="bookForm_fields">
+                                    <label for="bf-name">Full name:</label>
+                                    <input id="bf-name" name="name" type="text" required placeholder="Your name" />
+                                </div>
+                            
+                                <div class="bookForm_fields">
+                                    <label for="bf-email">E-mail:</label>
+                                    <input id="bf-email" name="email" type="email" required placeholder="you@example.com" />
+                                </div>
+                                
+                                <div class="bookForm_fields">
+                                    <label for="bf-phone">Phone:</label>
+                                    <input id="bf-phone" name="phone" type="tel" required placeholder="(00) 00000-0000"/>
+                                </div>
+                                
+                                <div class="bookForm_fields">
+                                    <label for="bf-service">Service:</label>
+                                    <select id="bf-service" name="service" required>
+                                        <option value="" disabled selected>Select a procedure</option>
+                                        <option value="facial">Facial Cleansing</option>
+                                        <option value="peeling">Chemical Peeling</option>
+                                        <option value="dermapen">Microneedling</option>
+                                        <option value="laser">Laser Hair Removal</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="bookForm_fields">
+                                    <label for="bf-date">Date:</label>
+                                    <input id="bf-date" name="date" type="date" required />
+                                </div>
+                                
+                                <div class="bookForm_fields">
+                                    <label for="bf-time">Time:</label>
+                                    <input id="bf-time" name="time" type="time" required />
+                                </div>
+                                
+                                <div class="bookForm_fields">
+                                    <label for="bf-notes">Notes (optional)</label>
+                                    <textarea id="bf-notes" name="notes" rows="4" placeholder="Tell us anything that might be relevant…"></textarea>
+                                </div>
+
+                                <div class="bookForm_fields checkbox">
+                                    <input type="checkbox" id="chkAccept" />
+                                    <label for="chkAccept">I accept the privacy policy*</label>
+                                </div>
+                                
+                                <button type="submit" class="bookForm_submit">Confirm reservation</button>
+                            </form>
+                            <div id="feedbackMessage" class="feedback">
+                                <div class="feedback_box">
+                                    <p></p>
+                                    <button type="button" aria-label="Close">x</button>
+                                </div>
+                            </div>
+                            <div id="reservationSuccess" style="display:none">
+                                <p>Reservation request sent! We will contact you soon.</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Copyright</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam officia aperiam vero minus cumque esse doloribus vitae accusantium officiis impedit?</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            initMenuToggle();
+            initReservationForm();
+        });
+    </script>
+</body>
+</html>

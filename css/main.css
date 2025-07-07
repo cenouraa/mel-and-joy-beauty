@@ -1,0 +1,634 @@
+:root{
+    --primary-color: #602B45;
+    --white: #ffffff;
+    --secondary-color: #d9909a;
+    --default-gap: 1rem;
+}
+html{
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+h1, h2, h3, h4{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+body{
+    background-color: var(--primary-color);
+}
+.maxWidth{
+    max-width: 70.25em;
+    margin: auto;
+    padding-inline: 1rem;      
+    box-sizing: border-box;
+}
+
+/*CSS DO HEADER*/
+.header{
+    position: sticky; 
+    top: 0;
+    z-index: 1000;
+    background: var(--primary-color);
+}
+.header_nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+.header_menu-toggle {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--white);
+    cursor: pointer;
+}
+.header_menu {
+    max-height: 0; /*pra ficar escondido*/
+    overflow: hidden; /*garante que nada vaze*/
+    width: 100%;
+    transition: max-height 0.3s ease;
+}
+.header_menu ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+.header_menu li {
+    text-align: left;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.header_menu a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+.header_menu a:hover {
+    color: var(--white);
+    transition: 300ms;
+}
+.header_menu.active {
+    max-height: 40rem; /*altura que mostra o menu*/
+}
+
+/*MD HEADER*/
+@media screen and (min-width: 48.75em) {
+    .header{ 
+        display: flex;
+        justify-content: space-between;
+        margin-left: 0;
+    }
+    .header_nav {
+        padding: 1.5rem 5rem;
+        margin-left: auto;
+    }
+    .header_menu-toggle {
+        display: none; /*esconde o botao de abrir o menu*/
+    }
+    .header_menu {
+        max-height: none; /*remove a restrição de altura maxima*/
+    }
+    .header_menu ul {
+        display: flex;
+        gap: 2rem;                  
+        width: auto;
+        padding: 0;
+        margin: 0;
+    }
+    .header_menu li {
+        padding: 0;               
+        border: 0;                  
+    }
+    .header_menu a {
+        font-size: 1rem;
+        padding: .5rem 0;
+    }
+}
+
+/*LG HEADER*/
+@media screen and (min-width: 56.25em) {
+    .header_menu ul {
+        gap: 2.5rem;
+    }
+    .header_menu a {
+        font-size: 1.125rem;
+        letter-spacing: .5px;
+    }
+}
+
+/*XL HEADER*/
+@media screen and (min-width: 74em) {
+    .header_menu a {
+        font-size: 1.2rem;
+    }
+}
+
+/*------------------------------------------------------------------------------------------*/
+
+/*CSS DO BANNER*/
+.banner{
+    background-image: url(../img/img_skin1.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 65vh;
+    min-height: 40rem; 
+    color: var(--white);  
+    text-shadow:  4px 4px 4px var(--primary-color);
+}
+.banner img{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: block;
+}
+.banner .maxWidth{
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+    padding-inline: 1rem;
+}
+.banner_title{
+    font-size: 4rem;
+    letter-spacing: 1px;
+}
+.banner_subtitle{
+    font-size: 1.4rem;
+    margin-top: .5rem;
+}
+
+/*MD DO BANNER*/
+@media screen and (min-width: 48.75em){
+    .banner{ 
+        height: 70vh; 
+    }
+    .banner_title{
+        font-size: 5rem; 
+    }
+    .banner_subtitle{
+        font-size: 1.8rem;
+    }
+}
+
+/*XL DO BANNER*/
+@media screen and (min-width: 74em){
+    .banner_title{
+        font-size: 7rem; 
+    }
+    .banner_subtitle{
+        font-size: 2rem;
+    }
+}
+
+/*-------------------------------------------------------------------------------------*/
+
+/*CSS DO MIDDLE (ABOUT ME) SECTION*/
+.middleContent{
+    padding-block: 3rem;
+    background: #f7f4f6;
+    color: #222;
+}
+.middleContent .row{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+.middleContent_title{
+    font-size: 1.75rem;
+    color: var(--primary-color);
+    margin: 0;
+    text-align: center;               
+}
+.middleContent_content{
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: justify;
+    max-width: 45ch;                     
+}
+.middleContent aside{
+    width: 100%;
+    max-width: 330px;
+}
+.middleContent aside img{
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/*MD DO MIDDLE CONTENT*/
+@media screen and (min-width: 48.75em){
+    .middleContent .row{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .middleContent_title, .middleContent_content{
+        text-align: left;   
+    }
+    .middleContent_title, .middleContent_content{
+        flex: 1 1 60%; 
+    }
+    .middleContent_content{ 
+        margin-right: 2.5rem; 
+    }
+    .middleContent aside{
+        flex: 1 1 40%;
+    }
+    .maxWidth{
+        max-width: 80%;
+    }
+}
+
+/*XL DO MIDDLE CONTENT*/
+@media screen and (min-width: 74em){
+    .middleContent_title{
+        font-size: 2.25rem;
+    }
+    .middleContent_content{
+        font-size: 1.125rem; 
+    }
+}
+
+/*-------------------------------------------------------------------------------------*/
+
+/*CSS DA MAIN (PROCEEDURES)*/
+.mainContent{
+    background:#fff;
+    padding-block:3rem;
+}
+.mainContent .row{
+    display:grid;
+    grid-template-columns:1fr; 
+    gap:2.5rem;                       
+    padding-inline: 1rem;
+}
+.mainContent_title-card{
+    grid-column: 1 / -1; 
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-align: center;
+    margin:0;
+}
+.mainContent_article{
+    background-color:#f7f4f6;
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,.05);
+    transition:transform .25s ease, box-shadow .25s ease;
+}
+.mainContent_container{
+    display:flex;
+    flex-direction:column;
+}
+.mainContent_img img{
+    width:100%;
+    height:22rem;
+    object-fit:cover;
+    display:block;
+}
+.mainContent_text{
+    padding:1.5rem;
+}
+.mainContent_title{
+    font-size:1.25rem;
+    color:var(--primary-color);
+    margin:0 0 .75rem;
+}
+.mainContent_text p{
+    font-size:1rem;
+    line-height:1.55;
+    color:#444;
+    margin:0;
+}
+
+/*MD DA MAIN*/
+@media screen and (min-width:48.75em){
+    .mainContent .row{
+        grid-template-columns:repeat(2,1fr);
+    }
+    .mainContent_title-card{
+        text-align:left;
+        font-size:2rem;
+    }
+    .mainContent_container{
+        flex-direction:column;
+        height:100%; 
+    }
+    .mainContent_img img{
+        width:100%;
+        height:220px;
+    }
+    .mainContent_text{
+        padding:1.5rem;
+    }
+}
+
+/*XL DA MAIN*/
+@media screen and (min-width:74em){
+    .mainContent .row{
+        grid-template-columns:repeat(4,1fr);
+    }
+    .mainContent_title-card{
+        font-size:2.25rem; 
+    }
+    .mainContent_container{
+        flex-direction:column;
+    }
+    .mainContent_img img{
+        width:100%;
+        height:220px;
+    }
+    .mainContent_text{
+        padding:1.25rem;
+    }
+    .mainContent_title{
+        font-size:1.35rem; 
+    }
+    .mainContent_text p{ 
+        font-size:1.05rem; 
+    }
+}
+
+/*-------------------------------------------------------------------------------------*/
+
+/*CSS DO REVIEW*/
+.reviewContent {
+    background: var(--primary-color);
+    padding-block: 3rem;
+}
+.reviewContent_title-card {
+    text-align: center;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--white);
+    margin: 0 0 2rem;
+}
+.reviewContent .maxWidth {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding-inline: 1rem;
+}
+.reviewContent_article {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    padding: 2rem 1.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.reviewContent_text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    margin: 0 0 1.25rem;
+}
+.reviewContent_title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+/*MD DO REVIEW*/
+@media (min-width: 48.75em) {
+    .reviewContent .maxWidth {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .reviewContent_article {
+        padding: 2rem;
+    }
+    .reviewContent_text p {
+        font-size: 1.05rem;
+    }
+    .reviewContent_title {
+        font-size: 1.2rem;
+    }
+    .reviewContent_title-card {
+        font-size: 2rem;
+    }
+}
+
+/*XL DO REVIEW*/
+@media (min-width: 74em) {
+    .reviewContent .maxWidth {
+        gap: 2.5rem;
+    }
+    .reviewContent_article {
+        padding: 2.25rem;
+    }
+    .reviewContent_text p {
+        font-size: 1.1rem;
+    }
+    .reviewContent_title {
+        font-size: 1.25rem;
+    }
+    .reviewContent_title-card {
+        font-size: 2.25rem;
+    }
+}
+
+/*-------------------------------------------------------------------------------------*/
+
+/*CSS DO FORM*/
+.bookForm{
+    background:#fff;
+    padding-block:3rem;
+    color:#222;
+}
+.bookForm_article{
+    background:#f7f4f6;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,.06);
+    overflow:hidden;
+}
+.bookForm_container{
+    display:flex;
+    flex-direction:column;
+}
+.bookForm_text{
+    padding:2rem 2rem 1rem;
+    text-align:center;
+}
+.bookForm_text h2{
+    font-size:1.75rem;
+    color:var(--primary-color);
+    margin:0 0 .75rem;
+}
+.bookForm_text p{
+    font-size:1rem;
+    margin:0;
+}
+
+/* Formulário */
+.bookForm_fields {
+    width: 100%;
+    margin-top: 1rem;
+}
+.bookForm_fields label {
+    display: block;
+    font-size: .9rem;
+    margin-bottom: .25rem;
+}
+.bookForm_fields input, .bookForm_fields select, .bookForm_fields textarea {
+    width: 100%;
+    padding: .65rem .8rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: border-color .2s ease;
+    display: block;
+}
+.bookForm_fields input:focus, .bookForm_fields select:focus, .bookForm_fields textarea:focus{
+    border-color:var(--primary-color);
+    outline:none;
+}
+.bookForm_submit{
+    display:block;
+    width:100%;
+    margin-top:1.5rem;
+    padding:.9rem;
+    font-size:1.05rem;
+    font-weight:600;
+    color:#fff;
+    background:var(--primary-color);
+    border:0;
+    border-radius:6px;
+    cursor:pointer;
+    transition: background .25s ease, transform .25s ease;
+}
+.bookForm_submit:hover{
+    background:color-mix(in srgb,var(--primary-color),#ffffff 15%);
+    transform:translateY(-2px);
+}
+
+/*mensagem de sucesso*/
+#reservationSuccess{
+    margin-top:1.5rem;
+    background:#e4ffe8;
+    border:1px solid #a2e3ad;
+    border-radius:6px;
+    padding:1rem;
+    text-align:center;
+    font-weight:600;
+    color:#187e32;
+}
+
+.bookForm_fields.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    color: #333;
+}
+.bookForm_fields.checkbox input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #5b2345;
+    cursor: pointer;
+}
+
+.feedback {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 1rem;
+}
+.feedback.show {
+    display: flex;
+}
+.feedback_box {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    max-width: 400px;
+    width: 100%;
+    animation: slideDown 0.35s ease;
+}
+.feedback_box p {
+    color: #b30000;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin: 0;
+    padding: 1.5rem;
+    text-align: center;
+}
+.feedback_box button {
+    display: block;
+    width: 100%;
+    border: none;
+    background: #f2f2f2;
+    color: #333;
+    padding: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-top: 1px solid #ccc;
+    transition: background 0.3s ease;
+}
+.feedback_box button:hover {
+    background: #e6e6e6;
+}
+
+/*MD DO FORM*/
+@media (min-width:48.75em){
+    .bookForm_container{
+        flex-direction:row;
+        align-items:center;
+    }
+    .bookForm_text, .bookForm_form{
+        flex:1 1 50%;
+    }
+    .bookForm_text{
+        padding:2.5rem 2.5rem;
+        text-align:left;
+    }
+    .bookForm_form{
+        padding:2.5rem 2.5rem 2.8rem;
+    }
+    .bookForm_text h2{
+        font-size:2rem;
+    }
+    .bookForm_text p {
+        font-size:1.05rem;
+    }
+}
+
+/*XL DO FORM*/
+@media (min-width:74em){
+    .bookForm_article{
+        max-width:56rem;
+        margin-inline:auto;
+    }
+    .bookForm_text h2{
+        font-size:2.25rem;
+    }
+    .bookForm_text p {
+        font-size:1.125rem; 
+    }
+}
+
+.footer{
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem;
+}
